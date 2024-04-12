@@ -72,7 +72,7 @@ const ScrollNavbar = () => {
       initial={{ y: -100 }}
       animate={{ y: visible ? 0 : -100 }}
     >
-      <div className={`w-full py-6 bg-[rgb(226,243,251)] backdrop-blur-md `}>
+      <div className={`w-full py-6 bg-[#e8f3f5] backdrop-blur-md `}>
         <div className="flex flex-row px-16 justify-between items-center">
          <Logo/>
           <div className="flex">

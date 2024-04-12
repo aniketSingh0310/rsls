@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <div className={cn('flex flex-col py-5 px-4 sm:px-6 lg:py-8 lg:px-10 border-t-[1px] border-black/20',mont.className)}>
 <div className='flex flex-col gap-6 md:gap-0 md:flex-row justify-between items-center'>
-<Image src={"/footerLogo.svg"} width={150} height={80} alt="Logo"/>
+<Logo/>
 <div>
     <ul className='flex gap-4 text-black/50'>
         <li className=' hover:text-[#237FD7] hover:underline  hover:underline-offset-4 cursor-pointer transform ease-linear duration-300'>Terms & Condition</li>

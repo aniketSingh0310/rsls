@@ -1,11 +1,11 @@
 "use client"
 import Head from "next/head";
 import Hero from "@/components/hero";
-import Service from "./_components/Service";
-import ServiceNew from "./_components/ServiceNew";
 import { useEffect } from "react";
 import About from "@/components/about";
 import { Services } from "@/components/services";
+import Partner from "@/components/partner";
+
 
 export default function Home() {
 
@@ -33,6 +33,7 @@ export default function Home() {
         <About/>
         {/* <ServiceNew/> */}
         <Services/>
+        <Partner/>
       </div>
     </>
   );
