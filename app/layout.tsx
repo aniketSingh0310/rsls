@@ -5,7 +5,6 @@ import ScrollNavbar from "@/components/ScrollNavbar";
 import Footer from "@/components/footer";
 import { cn } from "@/lib/utils";
 import localFont from "next/font/local";
-import Navbar from "@/components/Navbar";
 
 const raleway = Raleway({
   subsets: ["latin"],
