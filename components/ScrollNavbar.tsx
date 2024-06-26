@@ -72,14 +72,14 @@ const ScrollNavbar = () => {
       initial={{ y: -100 }}
       animate={{ y: visible ? 0 : -100 }}
     >
-      <div className={`w-full py-6 bg-[#e8f3f5] backdrop-blur-md `}>
+      <div className={`w-full py-6 bg-transparent backdrop-blur-sm `}>
         <div className="flex flex-row px-16 justify-between items-center">
          <Logo/>
           <div className="flex">
             {" "}
             <div className="flex items-center md:justify-center md:space-x-10">
               <ul className={cnx("flex space-x-12 font-medium")}>
-                <Link href={"/"}>
+                <Link href={"/"}> 
                   {" "}
                   <button>
                     <li>Home</li>

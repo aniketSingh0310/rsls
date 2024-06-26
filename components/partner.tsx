@@ -9,9 +9,9 @@ const myFont = localFont({
 });
 const Partner = () => {
   return (
-    <div className="w-full flex flex-col gap-6  my-24">
+    <div className="w-full flex flex-col gap-6  mb-24">
       <div className="w-full flex justify-center items-center flex-col gap-6">
-        <div className="w-[100px] h-[3px] bg-[#36afc8] flex justify-center text-transparent rounded-md">
+        <div className="w-[100px] h-[2px] bg-[#36afc8] flex justify-center text-transparent rounded-md">
           ,
         </div>
         <h1

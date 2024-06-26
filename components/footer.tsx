@@ -20,7 +20,7 @@ const Footer = () => {
     </ul>
 </div>
 </div>
-<p className='text-center text-black/40 text-[10px] md:mt-o mt-3'>COPYRIGHT © METALINK GENERAL TRADING LLC UAE 2024</p>
+<p className='text-center text-black/40 text-[10px] md:mt-o mt-3'>COPYRIGHT © REALITY SHIPPING LOGISTICS 2024</p>
     </div>
   )
 }

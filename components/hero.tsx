@@ -25,7 +25,7 @@ const Hero = () => {
           className="object-cover w-full h-full"
         >
           {/* Provide the source of your video */}
-          <source src="https://video.wixstatic.com/video/11062b_0222b74fadf544389c01621af73cfebd/1080p/mp4/file.mp4" type="video/mp4" />
+          <source src="https://videos.pexels.com/video-files/6595364/6595364-uhd_2560_1440_24fps.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="hero-overlay "></div>

@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import About from "@/components/about";
 import { Services } from "@/components/services";
 import Partner from "@/components/partner";
+import Ports from "@/components/ports";
 
 
 export default function Home() {
@@ -34,6 +35,7 @@ export default function Home() {
         {/* <ServiceNew/> */}
         <Services/>
         <Partner/>
+        <Ports/>
       </div>
     </>
   );
