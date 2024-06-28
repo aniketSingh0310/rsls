@@ -2,7 +2,9 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { PencilIcon, Settings, Settings2Icon } from "lucide-react";
 import localFont from 'next/font/local'
+import { PiEnvelopeSimpleLight } from "react-icons/pi";
 
 
 //font
@@ -41,15 +43,15 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
         >
-          <div className="hero-content text-center w-full">
-            
+          <div className="flex flex-col hero-content text-center w-full">
+            <Settings className="h-[100px] w-[100px] text-white animate-bounce"/>
               <div
                 id="sec1"
                 className={cn(
-                  "h-max text-[50px] md:leading-snug mt-10 text-white antialiased uppercase tracking-wide text-start",myFont.className)}
+                  "h-max text-[50px] md:leading-snug mt-10 text-white antialiased uppercase tracking-wide text-center",myFont.className)}
               >
-                Navigating The Seas Of Global Trade<br/> With Precision And Prudence
-              </div>
+               We Are Tuning <br/>Our Website
+              </div> 
               
             
           </div>

@@ -22,20 +22,18 @@ export default function Home() {
     <>
       <div className="flex flex-col">
         <Head>
-          <title>Mast Marine Consultancy</title>
+          <title>Reality Shipping & Logistics Services</title>
           <meta
             name="description"
-            content="MGB serves as your MAST Consultancy has 35 years of hands-on experience in every facet of marine construction and Operations, we have the skills, knowledge, equipment infrastructure to deliver full- service offshore solutions.passport to unforgettable travel experiences. We make it effortless to discover, plan, and book cherished experiences,
-          encompassing sightseeing, tours, food and beverages, adventure activities, shopping, and nightlife."
+            content=""
           />
         </Head>
 
         <Hero />
-        <About/>
-        {/* <ServiceNew/> */}
+        {/* <About/>
         <Services/>
         <Partner/>
-        <Ports/>
+        <Ports/> */}
       </div>
     </>
   );

@@ -12,7 +12,7 @@ const mont = Montserrat({ subsets: ["latin"], weight: ["300","400","600","700"] 
 const prompt = Kanit({ subsets: ["latin"], weight: ["400", "600"] });
 
 const About = () => {
-  const image = "/bg2.jpg";
+  const image = "/about.jpg";
   const insideStyles = {
     background: "white",
     padding: 20,
@@ -27,7 +27,7 @@ const About = () => {
   return (
     <div>
       <Parallax bgImage={image} strength={-200}>
-        <div style={{ height: 700 }}>
+        <div style={{ height: 400 }}>
           <div className="absolute left-1/4 top-1/2 transform -translate-x-1/2 -translate-y-1/2 gap-1">
             <p className={cn("text-white text-3xl", mont.className)}>About</p>
             <p
@@ -36,7 +36,7 @@ const About = () => {
                 prompt.className
               )}
             >
-              METALINK{" "}
+              {" "}
             </p>
             {/* <Image src={"/metalink.svg"} width={500} height={60} alt='logo'/> */}
           </div>
