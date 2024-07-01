@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Raleway } from "next/font/google";
 import "./globals.css";
-import ScrollNavbar from "@/components/ScrollNavbar";
-import Footer from "@/components/footer";
 import { cn } from "@/lib/utils";
 import localFont from "next/font/local";
+import ScrollNavbar from "@/components/global/ScrollNavbar";
+import Footer from "@/components/global/footer";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -33,10 +33,10 @@ export default function RootLayout({
           raleway.className
         )}
       >
-        {/* <ScrollNavbar/> */}
-        {/* <Navbar/> */}
+        <ScrollNavbar />
+
         {children}
-        {/* <Footer /> */}
+        <Footer/>
       </body>
     </html>
   );

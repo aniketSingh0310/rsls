@@ -2,10 +2,10 @@
 import Head from "next/head";
 import Hero from "@/components/hero";
 import { useEffect } from "react";
-import About from "@/components/about";
+import About from "@/components/shared/about";
 import { Services } from "@/components/services";
 import Partner from "@/components/partner";
-import Ports from "@/components/ports";
+import Ports from "@/components/shared/ports";
 
 
 export default function Home() {
@@ -30,10 +30,10 @@ export default function Home() {
         </Head>
 
         <Hero />
-        {/* <About/>
+        <About/>
         <Services/>
         <Partner/>
-        <Ports/> */}
+        <Ports/>
       </div>
     </>
   );

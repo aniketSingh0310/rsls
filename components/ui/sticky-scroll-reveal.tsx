@@ -3,17 +3,6 @@ import React, { useRef } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import localFont from "next/font/local";
-
-
-const myFont = localFont({
-  src: "../../font/pilatRegular.ttf",
-  display: "swap",
-});
-const myFont2 = localFont({
-  src: "../../font/pilatLight.ttf",
-  display: "swap",
-});
 
 export const StickyScroll = ({
   content,
@@ -51,11 +40,12 @@ export const StickyScroll = ({
     setActiveCard(closestBreakpointIndex);
   });
 
-  const backgroundColors = [
-    "#FBF8DD",
-    "#C4E4FF",
-    "#DFF5FF",
-  ];
+  
+const backgroundColors=[
+    "#ffffff",
+    "#ffffff",
+    "#ffffff",
+  ]
   const linearGradients = [
     "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
     "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
@@ -66,13 +56,13 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-[30rem] overflow-y-auto overflow-hidden flex justify-evenly relative space-x-16 rounded-md p-10"
+      className="h-[30rem] overflow-y-auto overflow-hidden flex justify-between relative space-x-10 rounded-md p-10"
       ref={ref}
     >
-      <div className="div relative flex items-start px-4">
-        <div className="max-w-[26rem]">
+      <div className="relative flex items-start px-4">
+        <div className="max-w-[30rem]">
           {content.map((item, index) => (
-            <div key={item.title + index} className="my-20">
+            <div key={item.title + index} className="my-16">
               <motion.h2
                 initial={{
                   opacity: 0,
@@ -80,7 +70,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className={cn("text-3xl tracking-[0.025em]  antialiased font-bold text-black",myFont.className)}
+                className={cn("text-4xl tracking-[0.025em]  antialiased font-bold")}
               >
                 {item.title}
               </motion.h2>
@@ -91,7 +81,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className={cn("text-lg tracking-wide text-black/70 max-w-sm mt-10")}
+                className={cn("text-lg tracking-wide text-black/70 mt-10")}
               >
                 {item.description}
               </motion.p>
@@ -104,7 +94,7 @@ export const StickyScroll = ({
           background: linearGradients[activeCard % linearGradients.length],
         }}
         className={cn(
-          "hidden lg:block h-[320px] w-[500px] rounded-md  bg-white sticky top-10 overflow-hidden",
+          "hidden lg:block  bg-white sticky top-10 overflow-hidden",
           contentClassName
         )}
       >

@@ -43,7 +43,7 @@ const content = [
     description:
       "From offshore supply vessels to marine logistics support, we provide reliable services to the offshore industry.",
     content: (
-      <div className="h-full w-full  flex items-center justify-center text-white">
+      <div className="h-full w-full flex items-center justify-center text-white">
         <Image
           src="/lab.jpg"
           width={300}
@@ -59,7 +59,7 @@ const content = [
     description:
       "Our certified inspectors conduct thorough inspections to ensure compliance with industry standards and regulations.",
     content: (
-      <div className="h-[400px] w-[500px]  flex items-center justify-center text-white">
+      <div className="h-full w-full flex items-center justify-center text-white">
         <Image
           src="/bg1.jpg"
           width={300}
@@ -75,7 +75,7 @@ const content = [
     description:
       "We distribute a wide range of marine products, including equipment, spare parts, and consumables, catering to the needs of shipowners and operators.",
     content: (
-      <div className="h-[400px] w-[500px]  flex items-center justify-center text-white">
+      <div className="h-full w-full flex items-center justify-center text-white">
         <Image
           src="/bg1.jpg"
           width={300}
@@ -91,9 +91,9 @@ const content = [
     description:
       "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
     content: (
-      <div className="h-[400px] w-[500px]  flex items-center justify-center text-white">
+      <div className="h-full w-full flex items-center justify-center text-white">
         <Image
-          src="/bg1.jpg"
+          src="/bg2.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover"
@@ -111,21 +111,7 @@ const myFont = localFont({
 export function Services() {
   return (
     <div className="w-full flex flex-col  py-16 gap-6">
-      <div className="w-full flex flex-col justify-center items-center gap-6">
-        <div className="w-[100px] h-[2px] bg-[#36afc8] flex justify-center text-transparent rounded-md">
-          ,
-        </div>
-
-        <h1
-          className={cn(
-            "text-[20px] md:text-[40px] text-black uppercase antialiased mb-4 ",
-            myFont.className
-          )}
-        >
-          Our Experties
-        </h1>
-      </div>
-
+      
       <StickyScroll content={content} />
     </div>
   );

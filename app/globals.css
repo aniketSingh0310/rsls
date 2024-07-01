@@ -176,40 +176,36 @@
   }
 }
 
-/* Navbar CSS   */
-button {
-  font-size: 18px;
-  color: white;
-  cursor: pointer;
-  position: relative;
-  border: none;
-  background: none;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: color;
+
+
+.custom-tabs .ant-tabs-ink-bar {
+  background-color: #facc15 !important;  /* Change the color of the active tab outline */
 }
 
-button:focus,
-button:hover {
-  color: #2691a6;
+/*  */
+.custom-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: black !important;
 }
 
-button:focus:after,
-button:hover:after {
-  width: 100%;
-  left: 0%;
+
+/* Prevent the tab from turning blue on hover */
+.custom-tabs .ant-tabs-tab:hover {
+  color: #facc15 !important; /* Maintain the same color on hover */
 }
 
-button:after {
-  content: "";
-  pointer-events: none;
-  bottom: -2px;
-  left: 50%;
-  position: absolute;
-  width: 0%;
-  height: 1px;
-  background-color:#2691a6;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: width, left;
+.custom-tabs .ant-tabs-tab-btn:focus {
+  color: #facc15 !important; /* Maintain the same color on focus */
+}
+
+/* Remove default hover underline */
+.custom-tabs .ant-tabs-tab:hover .ant-tabs-tab-btn {
+  text-decoration: none !important;
+}
+
+/* Customize the tab text color for inactive tabs */
+.custom-tabs .ant-tabs-tab .ant-tabs-tab-btn {
+  color: black; /* You can set your desired inactive tab text color */
+}
+.custom-tabs .ant-tabs-tab .ant-tabs-tab-btn {
+  font-size: 16px; /* Adjust the size as needed */
 }
