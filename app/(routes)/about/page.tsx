@@ -40,7 +40,7 @@ const About = () => {
         deliver services on a global scale.
       </p>
     </div>
-    <Carousel/>
+    {/* <Carousel/> */}
     <Contact/>
   </div>
   );

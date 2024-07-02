@@ -15,7 +15,7 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 const Carousel = () => {
   return (
-    <div>
+    <div className='bg-red-200'>
       <EmblaCarousel slides={SLIDES} options={OPTIONS} />
     </div>
   )

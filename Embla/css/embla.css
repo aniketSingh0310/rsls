@@ -43,7 +43,7 @@
     align-items: center;
   }
   .embla__button {
-    -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+    -webkit-tap-highlight-color:(white, 0.5);
     -webkit-appearance: none;
     appearance: none;
     background-color: transparent;
@@ -79,7 +79,7 @@
     margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
   }
   .embla__dot {
-    -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+    -webkit-tap-highlight-color:white;
     -webkit-appearance: none;
     appearance: none;
     background-color: transparent;
@@ -87,7 +87,7 @@
     display: inline-flex;
     text-decoration: none;
     cursor: pointer;
-    border: 0;
+    border: 1px;
     padding: 0;
     margin: 0;
     width: 2.6rem;
@@ -98,7 +98,7 @@
     border-radius: 50%;
   }
   .embla__dot:after {
-    box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+    box-shadow: inset 0 0 0 0.2rem rgba(0, 0, 0, 0.597);
     width: 1.4rem;
     height: 1.4rem;
     border-radius: 50%;
@@ -107,6 +107,6 @@
     content: '';
   }
   .embla__dot--selected:after {
-    box-shadow: inset 0 0 0 0.2rem var(--text-body);
+    box-shadow: inset 0 0 0 0.2rem black;
   }
   
