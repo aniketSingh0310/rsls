@@ -4,13 +4,14 @@ import React, { useRef } from "react";
 import { motion,useInView } from "framer-motion";
 import { Breadcrumb } from 'antd';
 import Contact from "@/components/shared/contact";
+import Carousel from "@/components/shared/carousel";
 
 
 
 const About = () => {
   
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 ">
     <div className="w-full h-[50vh] bg-yellow-400 flex justify-start items-center px-8 md:px-20">
       <div className="flex flex-col">
       <h2 className="text-4xl text-black font-bold">About</h2>
@@ -20,7 +21,7 @@ const About = () => {
       title: <a href="/">Home</a>,
     },
     {
-      title: <a href="/services">About</a>,
+      title: <a href="/about">About</a>,
     },
     
   ]}
@@ -39,7 +40,7 @@ const About = () => {
         deliver services on a global scale.
       </p>
     </div>
-    
+    <Carousel/>
     <Contact/>
   </div>
   );

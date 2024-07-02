@@ -6,6 +6,7 @@ import About from "@/components/shared/about";
 import { Services } from "@/components/services";
 import Partner from "@/components/partner";
 import Ports from "@/components/shared/ports";
+import Contact from "@/components/shared/contact";
 
 
 export default function Home() {
@@ -34,6 +35,7 @@ export default function Home() {
         <Services/>
         <Partner/>
         <Ports/>
+        <Contact/>
       </div>
     </>
   );
