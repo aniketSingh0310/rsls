@@ -77,7 +77,7 @@ const ScrollNavbar = () => {
             <Logo />
             <div className="flex flex-col">
               <div className="flex justify-end gap-4 pb-2">
-               <div className="flex gap-1 items-center"><Phone size={15}/><p className="text-sm">+91 8291573141</p></div>
+               {/* <div className="flex gap-1 items-center"><Phone size={15}/><p className="text-sm">+91 8291573141</p></div> */}
                <div className="flex gap-1 items-center"><Mail size={15}/><p className="text-sm">india@realityshipping.com</p></div>
               
               </div>
@@ -102,7 +102,7 @@ const ScrollNavbar = () => {
                   </Link>
                   <div
                     className="flex items-center gap-2 hover:brightness-110 hover:animate-pulse py-2 px-5 rounded-full bg-yellow-300 text-black  text-sm cursor-pointer"
-                    onClick={() => window.open("/brochure.pdf", "_blank")}
+                    onClick={() => window.open("/rsls.pdf", "_blank")}
                   >
                     <Download size={17} /> Brochure
                   </div>
