@@ -78,7 +78,7 @@ const ScrollNavbar = () => {
             <div className="flex flex-col">
               <div className="flex justify-end gap-4 pb-2">
                {/* <div className="flex gap-1 items-center"><Phone size={15}/><p className="text-sm">+91 8291573141</p></div> */}
-               <div className="flex gap-1 items-center"><Mail size={15}/><p className="text-sm">india@realityshipping.com</p></div>
+               <div className="flex gap-1 items-center"><Mail size={15}/><p className="text-sm">info@realityshipping.com</p></div>
               
               </div>
               <div className="flex items-center md:justify-center md:space-x-10">
