@@ -14,7 +14,7 @@ const Ports = () => {
           Port Coverage
         </h1>
       </div>
-      <div className="relative md:max-w-7xl w-[80%] flex flex-row gap-5 mx-auto justify-evenly my-10 z-10">
+      <div className="relative md:max-w-7xl w-[80%] flex flex-col md:flex-row gap-5 mx-auto justify-evenly my-10 z-10">
         <div className="p-16 border-yellow-400 border  flex flex-col space-y-3 bg-[#F4F7F8]">
           <h1 className={cn("text-2xl font-bold tracking-wide")}>West India</h1>
           {westIndia.map((port: any, index: any) => (

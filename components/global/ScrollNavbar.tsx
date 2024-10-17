@@ -12,7 +12,6 @@ import localFont from "next/font/local";
 import { Download, Mail, Menu, Phone, X } from "lucide-react";
 import Logo from "./logo";
 
-
 const ScrollNavbar = () => {
   const router = useRouter();
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -67,7 +66,9 @@ const ScrollNavbar = () => {
       {/* DEKSTOP VIEW */}
       <motion.nav
         className={`fixed top-0 w-full  transition-all duration-300 z-[100] hidden md:block ${
-          scrollPosition > 0 ? "bg-white text-gray-900" : "bg-transparent text-white/90"
+          scrollPosition > 0
+            ? "bg-white text-gray-900"
+            : "bg-transparent text-white/90"
         } ease-in duration-150 transition-all`}
         initial={{ y: -100 }}
         animate={{ y: visible ? 0 : -100 }}
@@ -77,9 +78,11 @@ const ScrollNavbar = () => {
             <Logo />
             <div className="flex flex-col">
               <div className="flex justify-end gap-4 pb-2">
-               {/* <div className="flex gap-1 items-center"><Phone size={15}/><p className="text-sm">+91 8291573141</p></div> */}
-               <div className="flex gap-1 items-center"><Mail size={15}/><p className="text-sm">info@realityshipping.com</p></div>
-              
+                {/* <div className="flex gap-1 items-center"><Phone size={15}/><p className="text-sm">+91 8291573141</p></div> */}
+                <div className="flex gap-1 items-center">
+                  <Mail size={15} />
+                  <p className="text-sm">info@realityshipping.com</p>
+                </div>
               </div>
               <div className="flex items-center md:justify-center md:space-x-10">
                 <ul
@@ -115,7 +118,7 @@ const ScrollNavbar = () => {
 
       {/* MOBILE VIEW */}
       <motion.nav
-        className="flex flex-col gap-0 fixed top-0 w-full  transition-all duration-300 z-[100] bg-black/40 backdrop-blur-md"
+        className="flex flex-col gap-0 fixed top-0 w-full  transition-all duration-300 z-[100] bg-white backdrop-blur-md"
         initial={{ y: -100 }}
         animate={{ y: visible ? 0 : -100 }}
       >
@@ -127,15 +130,15 @@ const ScrollNavbar = () => {
           <Logo />
           <div className="flex items-center gap-2">
             <button
-              className="flex items-center gap-2 hover:brightness-110 hover:animate-pulse py-2 px-5 rounded-full bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white font-semibold text-sm"
+              className="flex items-center gap-2 hover:brightness-110 hover:animate-pulse py-2 px-5 rounded-full bg-yellow-400 shadow-lg shadow-yellow-500/50 text-white font-semibold text-sm"
               onClick={() => window.open("/brochure.pdf", "_blank")}
             >
               <Download size={14} /> Brochure
             </button>{" "}
             {!isOpen ? (
-              <Menu size={30} className="text-white" onClick={toggleNav} />
+              <Menu size={30} className="text-black" onClick={toggleNav} />
             ) : (
-              <X size={30} className="text-white" onClick={toggleNav} />
+              <X size={30} className="text-black" onClick={toggleNav} />
             )}
           </div>
         </div>
@@ -143,7 +146,7 @@ const ScrollNavbar = () => {
           {isOpen && (
             <motion.div
               className={cn(
-                "h-max z-50 inset-x-0 md:hidden w-full bg-black/40 backdrop-blur-md shadow-lg py-3 px-3 transition-opacity duration-1000 opacity-100"
+                "h-max z-50 inset-x-0 md:hidden w-full bg-transparent backdrop-blur-md shadow-lg py-3 px-3 transition-opacity duration-1000 opacity-100"
               )}
               initial={{ y: -20 }} // Start off-screen
               animate={{ y: isOpen ? 0 : -300 }}
@@ -151,20 +154,30 @@ const ScrollNavbar = () => {
             >
               <ul
                 className={cn(
-                  "flex flex-col space-y-5  text-white text-[18px] font-medium text-start px-7 pb-6 tracking-wide"
+                  "flex flex-col space-y-5  text-black text-[18px] font-medium text-start px-7 pb-6 tracking-wide"
                 )}
               >
                 {" "}
-                <li className="border-b-[1px] border-b-black/10 pb-1">Home</li>
-                <li className="border-b-[1px] border-b-black/10 pb-1">
-                  Products
-                </li>
-                <li className="border-b-[1px] border-b-black/10 pb-1">
-                  About Us
-                </li>
-                <li className="border-b-[1px] border-b-black/10 pb-1">
-                  Contact Us
-                </li>
+                <Link href={"/"}>
+                  <li className="border-b-[1px] border-b-black/10 pb-1">
+                    Home
+                  </li>
+                </Link>
+                <Link href={"/services"}>
+                  <li className="border-b-[1px] border-b-black/10 pb-1">
+                    Service
+                  </li>
+                </Link>
+                <Link href={"/about"}>
+                  <li className="border-b-[1px] border-b-black/10 pb-1">
+                    About Us
+                  </li>
+                </Link>
+                <Link href={"/contact-us"}>
+                  <li className="border-b-[1px] border-b-black/10 pb-1">
+                    Contact Us
+                  </li>
+                </Link>
               </ul>
             </motion.div>
           )}

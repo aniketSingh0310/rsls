@@ -12,7 +12,7 @@ const Partner = () => {
       <h3 className='text-black text-base text-center'>Your Partner in Success</h3>
       <h2 className='text-black text-4xl font-semibold text-center'>Why Choose Reality Shipping & Logistics</h2>
       <p className='text-gray-600 text-base text-center'>Our comprehensive Shipping & Logistics services are designed to address all aspects of your business needs.</p>
-      <div className='max-w-6xl grid grid-cols-2  justify-center gap-[4rem] mt-14'>
+      <div className='max-w-6xl grid grid-cols-1 md:grid-cols-2  justify-center gap-[4rem] mt-14'>
        {/* 1 */}
         <div className='flex gap-5 items-start'>
            <div className='p-2 bg-yellow-300 flex justify-center items-center rounded-xl'><FaChartLine size={25} className='text-white'/></div>

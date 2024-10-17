@@ -4,7 +4,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="w-full bg-yellow-400 px-32 py-16 text-black relative">
+    <div className="w-full bg-yellow-400 p-10 md:px-32 md:py-16 text-black relative">
       
       <div className="flex flex-col gap-2">
         <h1 className="text-5xl font-semibold">
@@ -14,8 +14,8 @@ const Contact = () => {
           We&apos;re here to help your business thrive. Reach out to us today.
         </h3>
       </div>
-      <div className="flex flex-col md:flex-row w-full justify-between mt-20 gap-[40px]">
-        <div className="flex justify-center items-center gap-4">
+      <div className="flex flex-col md:flex-row w-full justify-between mt-5 md:mt-20 gap-[40px]">
+        <div className="flex justify-start md:justify-center items-center gap-4">
           <div className="flex justify-center items-center p-3 bg-white backdrop-blur-md rounded-full">
             <Mail size={25} className="" />
           </div>
@@ -24,7 +24,7 @@ const Contact = () => {
             <h4 className="font-normal">info@realityshipping.com</h4>
           </div>
         </div>
-        <div className="flex justify-center items-center gap-4">
+        <div className="flex justify-start md:justify-center items-center gap-4">
           <div className="flex justify-center items-center p-3 bg-white backdrop-blur-md rounded-full">
             <MapPin size={25} className="" />
           </div>
@@ -33,7 +33,7 @@ const Contact = () => {
             <h4 className="font-normal">Mumbai India</h4>
           </div>
         </div>
-        <div className="flex justify-center items-center gap-4">
+        <div className="flex justify-start md:justify-center items-center gap-4">
           <div className="flex justify-center items-center p-3 bg-white backdrop-blur-md rounded-full">
             <PhoneCallIcon size={25} className="" />
           </div>

@@ -15,7 +15,7 @@ const Hero = () => {
   return (
     <>
       <div
-        className="hero min-h-screen"
+        className="hero h-[70vh] md:min-h-screen"
         // style={{ backgroundImage: 'url("/ship.jpg")' }}
       >
         <video
@@ -46,7 +46,7 @@ const Hero = () => {
             <div
               id="sec1"
               className={cn(
-                "h-max text-[50px] md:leading-snug mt-10 text-white antialiased uppercase tracking-wide text-center",
+                "h-max text-lg md:text-[50px] md:leading-snug  text-white antialiased uppercase tracking-wide text-center",
                 myFont.className
               )}
             >

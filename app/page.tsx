@@ -7,6 +7,7 @@ import { Services } from "@/components/services";
 import Partner from "@/components/partner";
 import Ports from "@/components/shared/ports";
 import Contact from "@/components/shared/contact";
+import { NewServices } from "@/components/newServices";
 
 
 export default function Home() {
@@ -32,7 +33,8 @@ export default function Home() {
 
         <Hero />
         <About/>
-        <Services/>
+        <NewServices/>
+        {/* <Services/> */}
         <Partner/>
         <Ports/>
         <Contact/>
