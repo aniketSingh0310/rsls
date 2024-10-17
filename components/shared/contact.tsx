@@ -37,10 +37,10 @@ const Contact = () => {
           <div className="flex justify-center items-center p-3 bg-white backdrop-blur-md rounded-full">
             <PhoneCallIcon size={25} className="" />
           </div>
-          {/* <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1">
             <h3 className="font-semibold">Contact Us</h3>
             <h4 className="font-normal">+91 8291573141</h4>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

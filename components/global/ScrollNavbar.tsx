@@ -102,7 +102,7 @@ const ScrollNavbar = () => {
                   </Link>
                   <div
                     className="flex items-center gap-2 hover:brightness-110 hover:animate-pulse py-2 px-5 rounded-full bg-yellow-300 text-black  text-sm cursor-pointer"
-                    onClick={() => window.open("/rsls.pdf", "_blank")}
+                    onClick={() => window.open("/rslsPdf.pdf", "_blank")}
                   >
                     <Download size={17} /> Brochure
                   </div>
