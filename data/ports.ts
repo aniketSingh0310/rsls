@@ -85,3 +85,18 @@ export const bangladesh=[
         name:"Mongla"
     }
 ];
+
+export const others=[
+    {
+        name:"UAE"
+    },
+    {
+        name:"Maldives"
+    },
+    {
+        name:"Sri Lanka"
+    },
+    {
+        name:"Egypt"
+    }
+]

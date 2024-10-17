@@ -8,6 +8,7 @@ import Partner from "@/components/partner";
 import Ports from "@/components/shared/ports";
 import Contact from "@/components/shared/contact";
 import { NewServices } from "@/components/newServices";
+import NewPorts from "@/components/shared/newPorts";
 
 
 export default function Home() {
@@ -36,7 +37,8 @@ export default function Home() {
         <NewServices/>
         {/* <Services/> */}
         <Partner/>
-        <Ports/>
+        {/* <Ports/> */}
+        <NewPorts/>
         <Contact/>
       </div>
     </>
