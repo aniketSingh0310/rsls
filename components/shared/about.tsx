@@ -4,20 +4,12 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
-// //font
-// const myFont = localFont({
-//   src: "../font/pilatBold.ttf",
-//   display: "swap",
-// });
-// const myFont2 = localFont({
-//   src: "../font/pilatLight.ttf",
-//   display: "swap",
-// });
+
 const About = () => {
   return (
     
     <>
-      <div className="w-full flex flex-col-reverse md:flex-row mx-auto justify-between py-10 md:py-32 px-6 md:px-20 gap-20 bg-[url('/BGs/nnoise.svg')] bg-cover">
+      <div className="w-full flex flex-col-reverse md:flex-row mx-auto justify-between py-10 md:py-32 px-6 md:px-20 gap-20 bg-neutral-100">
         <div className="flex flex-col border-t md:border-t-0 md:border-r border-black/50">
           <div className="border-b border-black/50 space-y-4 p-10">
             <h1 className="text-4xl font-bold text-black">

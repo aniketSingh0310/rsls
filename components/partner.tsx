@@ -1,16 +1,14 @@
 import React from 'react'
 import { FaChartLine, FaReact, FaRegHandshake } from 'react-icons/fa';
 import { FaPeopleGroup } from 'react-icons/fa6';
-import { FiTarget } from 'react-icons/fi';
-import { GiTakeMyMoney } from 'react-icons/gi';
 
 
 
 const Partner = () => {
   return (
     <div className='w-[90%] md:max-w-7xl mx-auto flex flex-col justify-center items-center gap-4 py-20'>
-      <h3 className='text-black text-base text-center'>Your Partner in Success</h3>
-      <h2 className='text-black text-4xl font-semibold text-center'>Why Choose Reality Shipping & Logistics</h2>
+      <h3 className=' text-base text-center'>Your Partner in Success</h3>
+      <h2 className='text-[2.5em] font-bold text-center'>Why Choose Reality Shipping & Logistics</h2>
       <p className='text-gray-600 text-base text-center'>Our comprehensive Shipping & Logistics services are designed to address all aspects of your business needs.</p>
       <div className='max-w-6xl grid grid-cols-1 md:grid-cols-2  justify-center gap-[4rem] mt-14'>
        {/* 1 */}

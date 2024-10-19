@@ -8,6 +8,10 @@ import {
   export function NewServices() {
     return (
       <>
+        <div id='title' className='w-full flex flex-col justify-center items-center text-center py-5'>
+        <h4 className='text-[2.5em] font-bold'>Our Services</h4>
+        <div className='bg-yellow-400 p-1 w-[100px]'></div>
+      </div>
         <div className="md:max-w-7xl w-[90%] flex justify-start mx-auto border-b py-5">
           Services
         </div>

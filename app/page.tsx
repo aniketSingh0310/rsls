@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Head from "next/head";
 import Hero from "@/components/hero";
 import { useEffect } from "react";
@@ -9,37 +9,30 @@ import Ports from "@/components/shared/ports";
 import Contact from "@/components/shared/contact";
 import { NewServices } from "@/components/newServices";
 import NewPorts from "@/components/shared/newPorts";
-
+import Numbers from "@/components/shared/number";
 
 export default function Home() {
-
-  useEffect( () => {
-    (
-      async () => {
-          const LocomotiveScroll = (await import('locomotive-scroll')).default
-          const locomotiveScroll = new LocomotiveScroll();
-      }
-    )()
-  }, [])
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
   return (
     <>
       <div className="flex flex-col">
         <Head>
           <title>Reality Shipping & Logistics Services</title>
-          <meta
-            name="description"
-            content=""
-          />
+          <meta name="description" content="" />
         </Head>
 
         <Hero />
-        <About/>
-        <NewServices/>
-        {/* <Services/> */}
-        <Partner/>
-        {/* <Ports/> */}
-        <NewPorts/>
-        <Contact/>
+        <About />
+        <NewServices />
+        <Numbers />
+        <Partner />
+        <NewPorts />
+        <Contact />
       </div>
     </>
   );
