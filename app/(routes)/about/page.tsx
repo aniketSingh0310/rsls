@@ -12,7 +12,7 @@ const About = () => {
   
   return (
     <div className="space-y-10 ">
-    <div className="w-full h-[50vh] bg-yellow-400 flex justify-start items-center px-8 md:px-20">
+    <div className="w-full h-[50vh] bg-blue-300 flex justify-start items-center px-8 md:px-20">
       <div className="flex flex-col">
       <h2 className="text-4xl text-black font-bold">About</h2>
       <Breadcrumb

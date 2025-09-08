@@ -4,42 +4,31 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="w-full bg-yellow-400 p-10 md:px-32 md:py-16 text-black relative">
-      
-      <div className="flex flex-col gap-2">
-        <h1 className="text-5xl font-semibold">
-          Connect With Us
-        </h1>
-        <h3 className="text-base">
+    <div className="w-full bg-gradient-to-tr from-blue-500 via-blue-300 to-blue-200 p-20 text-black flex flex-col md:flex-row justify-around items-center">
+      <div className="flex flex-col gap-4 text-center md:text-left">
+        <h1 className="text-5xl font-semibold">Connect With Us</h1>
+        <h3 className="text-base max-w-md">
           We&apos;re here to help your business thrive. Reach out to us today.
         </h3>
       </div>
-      <div className="flex flex-col md:flex-row w-full justify-between mt-5 md:mt-20 gap-[40px]">
-        <div className="flex justify-start md:justify-center items-center gap-4">
+      <div className="flex flex-col gap-10 mt-10 md:mt-0">
+        <div className="flex items-center gap-4">
           <div className="flex justify-center items-center p-3 bg-white backdrop-blur-md rounded-full">
-            <Mail size={25} className="" />
+            <Mail size={25} />
           </div>
           <div className="flex flex-col gap-1">
             <h3 className="font-semibold">Email</h3>
             <h4 className="font-normal">info@realityshipping.com</h4>
           </div>
         </div>
-        <div className="flex justify-start md:justify-center items-center gap-4">
+
+        <div className="flex items-center gap-4">
           <div className="flex justify-center items-center p-3 bg-white backdrop-blur-md rounded-full">
-            <MapPin size={25} className="" />
+            <MapPin size={25} />
           </div>
           <div className="flex flex-col gap-1">
             <h3 className="font-semibold">Our Address</h3>
-            <h4 className="font-normal">Mumbai India</h4>
-          </div>
-        </div>
-        <div className="flex justify-start md:justify-center items-center gap-4">
-          <div className="flex justify-center items-center p-3 bg-white backdrop-blur-md rounded-full">
-            <PhoneCallIcon size={25} className="" />
-          </div>
-          <div className="flex flex-col gap-1">
-            <h3 className="font-semibold">Contact Us</h3>
-            <h4 className="font-normal">+91 8291573141</h4>
+            <h4 className="font-normal">Mumbai, India</h4>
           </div>
         </div>
       </div>

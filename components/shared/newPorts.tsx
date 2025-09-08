@@ -5,7 +5,7 @@ const NewPorts = () => {
     <div className='w-[90%] md:max-w-7xl mx-auto space-y-16 py-10'>
         <div id='title' className='w-full flex flex-col justify-center items-center text-center'>
         <h4 className='text-[2.5em] font-bold'>Global Ports Network</h4>
-        <div className='bg-yellow-400 p-1 w-[100px]'></div>
+        <div className='bg-blue-400 p-1 w-[100px]'></div>
       </div>
       <div id='EastIndia'>
        <h2 className='text-[2em] md:text-[3em] font-bold'>East India</h2>

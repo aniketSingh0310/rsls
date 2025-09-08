@@ -6,30 +6,25 @@ import { PencilIcon, Settings, Settings2Icon } from "lucide-react";
 import localFont from "next/font/local";
 import { PiEnvelopeSimpleLight } from "react-icons/pi";
 
-//font
+// Font
 const myFont = localFont({
-  src: "../font/pilatBold.ttf",
-  display: "swap",
+  src: '../font/pilatBold.ttf',
+  display: 'swap',
 });
+
 const Hero = () => {
   return (
     <>
-      <div
-        className="hero h-[70vh] md:min-h-screen"
-        // style={{ backgroundImage: 'url("/ship.jpg")' }}
-      >
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="object-cover w-full h-full"
-        >
-          {/* Provide the source of your video */}
-          <source src="/rslsVid.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="hero-overlay "></div>
+      <div className="relative min-h-screen hero">
+        {/* Background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-blue-400 via-blue-300 to-yellow-200"></div>
+        {/* Background image */}
+        <div
+          className="absolute inset-0"
+          style={{ backgroundImage: 'url("/BGs/lines.svg")', backgroundSize: 'cover', backgroundPosition: 'center' }}
+        ></div>
+
+        {/* Content */}
         <motion.div
           variants={{
             hidden: { opacity: 0, y: 75 },
@@ -41,17 +36,19 @@ const Hero = () => {
           }}
           initial="hidden"
           animate="visible"
+          className="relative z-10"
         >
           <div className="flex flex-col hero-content text-center w-full">
+            {/* <Settings className="h-[100px] w-[100px] animate-bounce"/> */}
             <div
               id="sec1"
               className={cn(
-                "h-max text-lg md:text-[50px] md:leading-snug  text-white antialiased uppercase tracking-wide text-center",
-                myFont.className
+                "h-max text-[70px] font-bold md:leading-snug mt-10 antialiased tracking-tight text-center text-black/80 "
               )}
             >
-              Worldwide Logistics & Professional Services
+              A Modern Shipping Agency <br/> & Logistics Company
             </div>
+            
           </div>
         </motion.div>
       </div>

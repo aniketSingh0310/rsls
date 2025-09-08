@@ -13,7 +13,7 @@ const Partner = () => {
       <div className='max-w-6xl grid grid-cols-1 md:grid-cols-2  justify-center gap-[4rem] mt-14'>
        {/* 1 */}
         <div className='flex gap-5 items-start'>
-           <div className='p-2 bg-yellow-300 flex justify-center items-center rounded-xl'><FaChartLine size={25} className='text-white'/></div>
+           <div className='p-2 bg-blue-500 flex justify-center items-center rounded-xl'><FaChartLine size={25} className='text-white'/></div>
            <div className='flex flex-col gap-2'>
             <p className='text-lg text-black font-semibold'>Commitment to Efficiency</p>
             <p className='text-base text-black/60'>We aim for operational excellence by streamlining processes to provide efficient and dependable logistics solutions.</p>
@@ -21,7 +21,7 @@ const Partner = () => {
         </div>
         {/* 2 */}
         <div className='flex gap-5 items-start'>
-           <div className='p-2 bg-yellow-300 flex justify-center items-center rounded-xl'><FaRegHandshake size={25} className='text-white'/></div>
+           <div className='p-2 bg-blue-500 flex justify-center items-center rounded-xl'><FaRegHandshake size={25} className='text-white'/></div>
            <div className='flex flex-col gap-2'>
             <p className='text-lg text-black font-semibold'>Industry Expertise and Connections</p>
             <p className='text-base text-black/60'>With extensive experience in the ports business, we leverage our strong industry connections to deliver expert insights and superior services.</p>
@@ -29,7 +29,7 @@ const Partner = () => {
         </div>
         {/* 3 */}
         <div className='flex gap-5 items-start'>
-           <div className='p-2 bg-yellow-300 flex justify-center items-center rounded-xl'><FaPeopleGroup size={25} className='text-white'/></div>
+           <div className='p-2 bg-blue-500 flex justify-center items-center rounded-xl'><FaPeopleGroup size={25} className='text-white'/></div>
            <div className='flex flex-col gap-2'>
             <p className='text-lg text-black font-semibold'>People-Oriented</p>
             <p className='text-base text-black/60'>We place a high priority on the well-being and satisfaction of our team members, clients, and partners. Your success is a reflection of our success.</p>
@@ -37,7 +37,7 @@ const Partner = () => {
         </div>
         {/* 4 */}
         <div className='flex gap-5 items-start'>
-           <div className='p-2 bg-yellow-300 flex justify-center items-center rounded-xl'><FaReact size={25} className='text-white'/></div>
+           <div className='p-2 bg-blue-500 flex justify-center items-center rounded-xl'><FaReact size={25} className='text-white'/></div>
            <div className='flex flex-col gap-2'>
             <p className='text-lg text-black font-semibold'>Transparency & Loyalty</p>
             <p className='text-base text-black/60'>We uphold open communication and honesty, building trust and fostering long-lasting relationships with all stakeholders.</p>

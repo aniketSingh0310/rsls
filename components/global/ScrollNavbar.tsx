@@ -66,15 +66,13 @@ const ScrollNavbar = () => {
       {/* DEKSTOP VIEW */}
       <motion.nav
         className={`fixed top-0 w-full  transition-all duration-300 z-[100] hidden md:block ${
-          scrollPosition > 0
-            ? "bg-white text-gray-900"
-            : "bg-transparent text-white/90"
+          scrollPosition > 0 ? "bg-white text-gray-900" : "bg-transparent text-black/80 antialiased"
         } ease-in duration-150 transition-all`}
         initial={{ y: -100 }}
         animate={{ y: visible ? 0 : -100 }}
       >
-        <div className={`w-full py-5  bg-transparent`}>
-          <div className="flex flex-row px-16 justify-between items-center">
+        <div className={`w-full py-3  bg-transparent`}>
+          <div className="flex flex-row px-10 justify-between items-center">
             <Logo />
             <div className="flex flex-col">
               <div className="flex justify-end gap-4 pb-2">
@@ -104,8 +102,8 @@ const ScrollNavbar = () => {
                     <li>Contact Us</li>
                   </Link>
                   <div
-                    className="flex items-center gap-2 hover:brightness-110 hover:animate-pulse py-2 px-5 rounded-full bg-yellow-300 text-black  text-sm cursor-pointer"
-                    onClick={() => window.open("/rslsPdf.pdf", "_blank")}
+                    className="flex items-center gap-2 hover:brightness-110 hover:animate-pulse py-2 px-5 rounded-full border border-black hover:bg-blue-300  text-black  text-sm cursor-pointer"
+                    onClick={() => window.open("/rsls.pdf", "_blank")}
                   >
                     <Download size={17} /> Brochure
                   </div>

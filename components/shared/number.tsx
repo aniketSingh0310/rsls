@@ -18,7 +18,7 @@ const Numbers = () => {
     <div className="w-full flex flex-col justify-center items-center py-[5rem] space-y-10">
        <div id='title' className='w-full flex flex-col justify-center items-center text-center'>
         <h4 className='text-[2.5em] font-bold'>Results Speak For Themselves</h4>
-        <div className='bg-yellow-400 p-1 w-[100px]'></div>
+        <div className='bg-blue-400 p-1 w-[100px]'></div>
       </div>
       <motion.div
         initial={{ opacity: 0 }}
@@ -36,7 +36,7 @@ const Numbers = () => {
             prefix=""
             suffix=" Hrs"
             duration={4}
-            className="text-[40px] md:text-[3rem] font-extrabold text-yellow-500"
+            className="text-[40px] md:text-[3rem] font-extrabold text-blue-500"
           />
           <h4 className="text-[16px] ">
             Average Inquiry Response Time
@@ -48,7 +48,7 @@ const Numbers = () => {
             end={startCount ? 27 : 0}
             suffix=" Days"
             duration={4}
-            className="text-[40px] md:text-[3rem] font-extrabold text-yellow-500"
+            className="text-[40px] md:text-[3rem] font-extrabold text-blue-400"
           />
           <h4 className="text-[16px]">
             Average Time between Vessel Departure and FDA
@@ -60,7 +60,7 @@ const Numbers = () => {
             end={startCount ? 4 : 0}
             duration={4}
             suffix=" %"
-            className="text-[40px] md:text-[3rem] font-extrabold text-yellow-400"
+            className="text-[40px] md:text-[3rem] font-extrabold text-blue-300"
           />
           <h4 className="text-[16px]">
             Discrepancy between PDA and FDA amount
