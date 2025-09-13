@@ -1,43 +1,312 @@
-import ServicesTab from "@/components/shared/servicesTab";
-import React from "react";
-import { Breadcrumb } from 'antd';
-import Contact from "@/components/shared/contact";
+import React from 'react';
+import { 
+  Ship, 
+  Anchor, 
+  Package, 
+  Truck, 
+  Plane, 
+  Warehouse, 
+  Users, 
+  Settings,
+  FileCheck,
+  Zap,
+  Globe,
+  Shield,
+  Clock,
+  CheckCircle
+} from 'lucide-react';
 
-const Services = () => {
+const ServicesPage = () => {
+  const mainServices = [
+    {
+      icon: <Anchor className="w-10 h-10" />,
+      title: "Port Agency",
+      subtitle: "Full/Protective/Husbandry",
+      color: "bg-blue-500",
+      services: [
+        "Crew Change",
+        "Cargo Supervision", 
+        "CTM (Cash to Master)",
+        "Sludge Discharge",
+        "Vessel Port Clearance",
+        "Pre-Arrival Documentation",
+        "Provisions",
+        "Garbage Disposal",
+        "Bunkering",
+        "Surveyors",
+        "Spare Parts Delivery & Clearance"
+      ]
+    },
+    {
+      icon: <Ship className="w-10 h-10" />,
+      title: "Liner Agency",
+      subtitle: "Comprehensive vessel operations",
+      color: "bg-blue-400",
+      services: [
+        "Vessel Operations",
+        "Sales Import/Exports",
+        "Documentation Imports/Exports/Transshipments",
+        "Special Cargo Handling (OOG/Dangerous Goods/Reefer)",
+        "Transportation Rail and Trucking",
+        "Transshipment Arrangements",
+        "Feedering Arrangements",
+        "Equipment Control"
+      ]
+    },
+    {
+      icon: <Package className="w-10 h-10" />,
+      title: "Logistics",
+      subtitle: "End-to-end supply chain solutions",
+      color: "bg-blue-300",
+      services: [
+        "Ocean & Air Freight",
+        "Land Transport",
+        "Door to Door services",
+        "Warehousing",
+        "Customs clearance",
+        "Chartering & Broking",
+        "Offshore oil & gas project services",
+        "End to End logistics"
+      ]
+    }
+  ];
+
+  const additionalServices = [
+    {
+      icon: <Settings className="w-8 h-8" />,
+      title: "Ship Spare Parts",
+      description: "Clearance & Purchase services for all vessel requirements",
+      color: "bg-gray-600"
+    },
+    {
+      icon: <FileCheck className="w-8 h-8" />,
+      title: "Dry Docking Digitalisation",
+      description: "Modern digital solutions for dry docking operations",
+      color: "bg-gray-700"
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Husbandry Agency",
+      description: "Crew Change & Vessel Support Services",
+      color: "bg-gray-500"
+    }
+  ];
+
+  const serviceHighlights = [
+    {
+      icon: <Clock className="w-8 h-8" />,
+      title: "24/7 Operations",
+      description: "Round-the-clock support for all your maritime needs",
+      color: "bg-blue-500"
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: "Global Coverage",
+      description: "Services available across major ports worldwide",
+      color: "bg-blue-400"
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Trusted Expertise",
+      description: "Experienced professionals with local knowledge",
+      color: "bg-blue-300"
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "Fast Response",
+      description: "3-hour average inquiry response time",
+      color: "bg-gray-600"
+    }
+  ];
+
+  const transportModes = [
+    { icon: <Ship className="w-12 h-12" />, title: "Sea Freight", description: "Ocean shipping solutions" },
+    { icon: <Plane className="w-12 h-12" />, title: "Air Freight", description: "Fast air cargo services" },
+    { icon: <Truck className="w-12 h-12" />, title: "Land Transport", description: "Road and rail logistics" }
+  ];
+
   return (
-    <div className="space-y-10">
-      <div className="w-full h-[50vh] bg-blue-400 flex justify-start items-center px-8 md:px-20">
-        <div className="flex flex-col">
-        <h2 className="text-4xl text-black font-bold">Services</h2>
-        <Breadcrumb
-    items={[
-      {
-        title: <a href="/">Home</a>,
-      },
-      {
-        title: <a href="/services">Services</a>,
-      },
-      
-    ]}
-  />
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-tr from-blue-500 via-blue-300 to-yellow-100 text-white py-20">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-2 mt-4">Our Services</h1>
+          <p className="text-xl mb-12 max-w-3xl mx-auto leading-relaxed font-medium text-blue-50">
+            Comprehensive shipping and logistics solutions tailored to meet your unique requirements
+          </p>
+          <div className="flex flex-wrap justify-center gap-6">
+            {transportModes.map((mode, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-colors duration-300">
+                <div className="text-blue-100 mb-3 flex justify-center">{mode.icon}</div>
+                <h3 className="font-semibold text-lg">{mode.title}</h3>
+                <p className="text-sm text-blue-200 mt-1">{mode.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
-        
-      </div>
-      <div className="w-[90%] md:max-w-7xl mx-auto flex md:flex-row flex-col justify-center md:justify-between py-20 items-center space-y-4">
-        <h3 className="text-4xl text-black font-bold md:border-r border-black/50 text-center md:text-start">
-          Fast And Reliable Shipping & Logistics Services
-        </h3>
-        <p className="px-10 text-justify md:text-start">
-          We offer a comprehensive array of specialized services for all types
-          of vessels through our own offices in India, UAE, and Singapore.
-          Additionally, our extensive network of trusted partners allows us to
-          deliver services on a global scale.
-        </p>
-      </div>
-      <ServicesTab />
-      <Contact/>
+      </section>
+
+      {/* Main Services */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
+            Core Services
+          </h2>
+          <div className="grid lg:grid-cols-3 gap-8">
+            {mainServices.map((service, index) => (
+              <div key={index} className="bg-gray-50 rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div className={`${service.color} p-6 text-white`}>
+                  <div className="flex items-center mb-4">
+                    <div className="bg-white/20 rounded-full p-3 mr-4">
+                      {service.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold">{service.title}</h3>
+                      <p className="text-blue-100 font-medium">{service.subtitle}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <ul className="space-y-3">
+                    {service.services.map((item, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700 font-medium">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Services */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
+            Additional Services
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {additionalServices.map((service, index) => (
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+                <div className={`${service.color} rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center text-white`}>
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-gray-800">{service.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Highlights */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
+            Why Choose Us
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {serviceHighlights.map((highlight, index) => (
+              <div key={index} className="text-center">
+                <div className={`${highlight.color} rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center text-white hover:scale-105 transition-transform duration-300`}>
+                  {highlight.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-gray-800">{highlight.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{highlight.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sustainability & Innovation */}
+      <section className="py-16 bg-blue-500 text-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold mb-12">Sustainability & Innovation</h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                <div className="bg-white/20 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                  <Globe className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Eco-Friendly Practices</h3>
+                <p className="text-blue-100 leading-relaxed">
+                  Our commitment to sustainability ensures we adopt eco-friendly practices, 
+                  minimizing environmental impact while optimizing efficiency.
+                </p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                <div className="bg-white/20 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Innovative Approaches</h3>
+                <p className="text-blue-100 leading-relaxed">
+                  We leverage our expertise and innovative approaches to overcome 
+                  any logistical challenges and provide cutting-edge solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Flow */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
+            Our Process
+          </h2>
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="bg-blue-500 text-white rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center text-2xl font-bold shadow-lg">1</div>
+              <h3 className="text-lg font-bold mb-2">Initial Inquiry</h3>
+              <p className="text-gray-600 text-sm">Contact us with your requirements</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-blue-400 text-white rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center text-2xl font-bold shadow-lg">2</div>
+              <h3 className="text-lg font-bold mb-2">Quick Response</h3>
+              <p className="text-gray-600 text-sm">3-hour average response time</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-blue-300 text-white rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center text-2xl font-bold shadow-lg">3</div>
+              <h3 className="text-lg font-bold mb-2">Service Execution</h3>
+              <p className="text-gray-600 text-sm">Professional service delivery</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-gray-600 text-white rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center text-2xl font-bold shadow-lg">4</div>
+              <h3 className="text-lg font-bold mb-2">Follow-up</h3>
+              <p className="text-gray-600 text-sm">Ensuring complete satisfaction</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gray-900 text-white">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
+          <p className="text-lg mb-10 text-gray-300 max-w-2xl mx-auto">
+            Experience first-class shipping and logistics services with our expert team. 
+            Contact us today for a customized solution.
+          </p>
+          <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+            <a href="tel:+918291573141" className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-full font-semibold transition-colors duration-300">
+              Call Now: +91 8291573141
+            </a>
+            <a href="mailto:info@realityshipping.com" className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300">
+              Email Us
+            </a>
+          </div>
+          <div className="mt-8 text-gray-400">
+            <p>24/7 Operations Team Available</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
 
-export default Services;
+export default ServicesPage;
