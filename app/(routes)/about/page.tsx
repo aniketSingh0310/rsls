@@ -1,5 +1,8 @@
+"use client"
 import React from 'react';
 import { Ship, Globe, Users, Award, Target, Eye } from 'lucide-react';
+import { Parallax } from 'react-parallax';
+import { cn } from '@/lib/utils';
 
 const AboutPage = () => {
   const values = [
@@ -53,30 +56,33 @@ const AboutPage = () => {
     { number: "27", unit: "days", label: "Average Time between Vessel Departure and FDA" },
     { number: "4", unit: "%", label: "Discrepancy between PDA and FDA amount" }
   ];
+    const image = "/about.jpg";
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-tr from-blue-500 via-blue-300 to-yellow-200 text-white py-20">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-2 mt-4 leading-tight">
-            Reality Shipping
-            <span className="block text-3xl md:text-4xl font-normal text-blue-100 mt-2">
-              & Logistics
-            </span>
-          </h1>
-          <p className="text-xl font-medium mb-10 max-w-3xl mx-auto text-blue-50">
-            Your Maritime Reality, Our Passion and Priority
-          </p>
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">
-            <p className="text-lg font-medium leading-relaxed">
-              A modern global shipping agency and logistics company providing 
-              first-class end-to-end services across all ports where we operate.
-            </p>
-          </div>
-        </div>
-      </section>
+      <Parallax
+             bgImage={image} strength={-250} className=''>
+                    <div style={{ height: 500 }} className='bg-black/12 relative'>
+                      <div className="absolute left-[40%] top-1/2 transform -translate-x-1/2 -translate-y-1/2 gap-1">
+                        <p className={cn("text-white text-3xl")}>About Us</p>
+                        <p
+                          className={cn(
+                            "text-white font-extrabold md:text-[35px] text-[30px] tracking-[0.03em]",
+                            
+                          )}
+                        >
+                         Know more at what makes Reality Shipping & Logistics stand out
 
+                        </p>
+                        <p className={cn("text-white text-sm ")}>
+                          Comprehensive solutions for all your maritime and logistics needs
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </Parallax>
+      
       {/* Mission & Vision */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6">

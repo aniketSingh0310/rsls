@@ -43,7 +43,7 @@ const About = () => {
             <p>View more about<br/>our services</p>
           </Link>
         </div>
-        <div>
+        <div className="flex items-center">
           <Image
             src={"/inComponents/port.jpg"}
             width={800}

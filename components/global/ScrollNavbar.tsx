@@ -66,7 +66,7 @@ const ScrollNavbar = () => {
       {/* DEKSTOP VIEW */}
       <motion.nav
         className={`fixed top-0 w-full  transition-all duration-300 z-[100] hidden md:block ${
-          scrollPosition > 0 ? "bg-white text-gray-900" : "bg-transparent text-black/80 antialiased"
+          scrollPosition > 0 ? "bg-white text-gray-900" : "bg-transparent text-white antialiased"
         } ease-in duration-150 transition-all`}
         initial={{ y: -100 }}
         animate={{ y: visible ? 0 : -100 }}
@@ -98,11 +98,17 @@ const ScrollNavbar = () => {
                   <Link href={"/about"}>
                     <li className="">About Us</li>
                   </Link>
+                  <Link href={"/locations"}>
+                    <li className="">Locations</li>
+                  </Link>
                   <Link href={"/contact-us"}>
                     <li>Contact Us</li>
                   </Link>
                   <div
-                    className="flex items-center gap-2 hover:brightness-110 hover:animate-pulse py-2 px-5 rounded-full border border-black hover:bg-blue-300  text-black  text-sm cursor-pointer"
+                    className={`flex items-center gap-2 hover:brightness-110 hover:animate-pulse py-2 px-5 rounded-full  hover:bg-blue-300 text-sm cursor-pointer
+                      ${
+          scrollPosition > 0 ? "border border-black text-black" : "border border-white text-white "
+        } `}
                     onClick={() => window.open("/rsls.pdf", "_blank")}
                   >
                     <Download size={17} /> Brochure
@@ -128,7 +134,7 @@ const ScrollNavbar = () => {
           <Logo />
           <div className="flex items-center gap-2">
             <button
-              className="flex items-center gap-2 hover:brightness-110 hover:animate-pulse py-2 px-5 rounded-full bg-yellow-400 shadow-lg shadow-yellow-500/50 text-white font-semibold text-sm"
+              className="flex items-center gap-2 hover:brightness-110 hover:animate-pulse py-2 px-5 rounded-full bg-yellow-400 shadow-lg shadow-yellow-500/50 text-black font-semibold text-sm"
               onClick={() => window.open("/brochure.pdf", "_blank")}
             >
               <Download size={14} /> Brochure

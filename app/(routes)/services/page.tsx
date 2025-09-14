@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { 
   Ship, 
@@ -15,6 +16,8 @@ import {
   Clock,
   CheckCircle
 } from 'lucide-react';
+import { Parallax } from 'react-parallax';
+import { cn } from '@/lib/utils';
 
 const ServicesPage = () => {
   const mainServices = [
@@ -22,7 +25,7 @@ const ServicesPage = () => {
       icon: <Anchor className="w-10 h-10" />,
       title: "Port Agency",
       subtitle: "Full/Protective/Husbandry",
-      color: "bg-blue-500",
+      color: "bg-blue-700",
       services: [
         "Crew Change",
         "Cargo Supervision", 
@@ -41,7 +44,7 @@ const ServicesPage = () => {
       icon: <Ship className="w-10 h-10" />,
       title: "Liner Agency",
       subtitle: "Comprehensive vessel operations",
-      color: "bg-blue-400",
+      color: "bg-blue-600",
       services: [
         "Vessel Operations",
         "Sales Import/Exports",
@@ -57,7 +60,7 @@ const ServicesPage = () => {
       icon: <Package className="w-10 h-10" />,
       title: "Logistics",
       subtitle: "End-to-end supply chain solutions",
-      color: "bg-blue-300",
+      color: "bg-blue-500",
       services: [
         "Ocean & Air Freight",
         "Land Transport",
@@ -119,39 +122,35 @@ const ServicesPage = () => {
     }
   ];
 
-  const transportModes = [
-    { icon: <Ship className="w-12 h-12" />, title: "Sea Freight", description: "Ocean shipping solutions" },
-    { icon: <Plane className="w-12 h-12" />, title: "Air Freight", description: "Fast air cargo services" },
-    { icon: <Truck className="w-12 h-12" />, title: "Land Transport", description: "Road and rail logistics" }
-  ];
-
+  const image = "/services.jpg";
+  
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-tr from-blue-500 via-blue-300 to-yellow-100 text-white py-20">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-2 mt-4">Our Services</h1>
-          <p className="text-xl mb-12 max-w-3xl mx-auto leading-relaxed font-medium text-blue-50">
-            Comprehensive shipping and logistics solutions tailored to meet your unique requirements
-          </p>
-          <div className="flex flex-wrap justify-center gap-6">
-            {transportModes.map((mode, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-colors duration-300">
-                <div className="text-blue-100 mb-3 flex justify-center">{mode.icon}</div>
-                <h3 className="font-semibold text-lg">{mode.title}</h3>
-                <p className="text-sm text-blue-200 mt-1">{mode.description}</p>
+      <Parallax
+       bgImage={image} strength={-250}>
+              <div style={{ height: 500 }} className='bg-black/12 relative'>
+                <div className="absolute left-1/3 top-1/2 transform -translate-x-1/2 -translate-y-1/2 gap-1">
+                  <p className={cn("text-white text-3xl")}>Services</p>
+                  <p
+                    className={cn(
+                      "text-white font-extrabold md:text-[35px] text-[30px] tracking-[0.03em]",
+                      
+                    )}
+                  >
+                    Explore our wide range of services
+                  </p>
+                  <p className={cn("text-white text-sm ")}>
+                    Comprehensive solutions for all your maritime and logistics needs
+                  </p>
+                  
+                </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </Parallax>
 
       {/* Main Services */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
-            Core Services
-          </h2>
           <div className="grid lg:grid-cols-3 gap-8">
             {mainServices.map((service, index) => (
               <div key={index} className="bg-gray-50 rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
